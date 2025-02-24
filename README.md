@@ -3,10 +3,6 @@
 ### ** AI-powered sales assistant for real-time customer calls!**
 This project uses **Flask, Twilio, and Mistral-7B AI** to make **real-time sales calls** to Indian numbers, provide course details, and book Google Meet demos.
 
-![Twilio AI Caller](https://img.shields.io/badge/Twilio-Voice%20AI-red)  
-![Flask](https://img.shields.io/badge/Flask-Web%20Server-blue)  
-![Hugging Face](https://img.shields.io/badge/HuggingFace-Mistral--7B-yellow)  
-
 ---
 
 ##  **Project Features**
