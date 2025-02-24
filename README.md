@@ -1,6 +1,6 @@
 
-## **📞 Sales Caller AI - Twilio + AI Voice Assistant**
-### **🚀 AI-powered sales assistant for real-time customer calls!**
+## ** Sales Caller AI - Twilio + AI Voice Assistant**
+### ** AI-powered sales assistant for real-time customer calls!**
 This project uses **Flask, Twilio, and Mistral-7B AI** to make **real-time sales calls** to Indian numbers, provide course details, and book Google Meet demos.
 
 ![Twilio AI Caller](https://img.shields.io/badge/Twilio-Voice%20AI-red)  
@@ -9,16 +9,16 @@ This project uses **Flask, Twilio, and Mistral-7B AI** to make **real-time sales
 
 ---
 
-## 📌 **Project Features**
-✅ **AI-Powered Sales Calls** – Calls real users & interacts with AI.  
-✅ **Real-Time Voice Responses** – Uses Twilio for a human-like voice.  
-✅ **Interactive IVR System** – Press **1 for course details, 2 for booking a demo**.  
-✅ **Automated Google Meet Booking** – AI books a meeting and sends a link.  
-✅ **No Manual Updates Required** – ngrok URL is dynamically updated!  
+##  **Project Features**
+ **AI-Powered Sales Calls** – Calls real users & interacts with AI.  
+ **Real-Time Voice Responses** – Uses Twilio for a human-like voice.  
+ **Interactive IVR System** – Press **1 for course details, 2 for booking a demo**.  
+ **Automated Google Meet Booking** – AI books a meeting and sends a link.  
+ **No Manual Updates Required** – ngrok URL is dynamically updated!  
 
 ---
 
-## ⚙️ **Tech Stack**
+##  **Tech Stack**
 | Technology | Usage |
 |------------|-------|
 | **Flask** | Web server to handle Twilio voice requests |
@@ -29,19 +29,19 @@ This project uses **Flask, Twilio, and Mistral-7B AI** to make **real-time sales
 
 ---
 
-## 📂 **Installation & Setup**
-### 🔹 **1. Install Dependencies**
+## **Installation & Setup**
+###  **1. Install Dependencies**
 ```bash
 pip install flask twilio transformers accelerate sentencepiece pyngrok
 ```
 
-### 🔹 **2. Authenticate Hugging Face**
+###  **2. Authenticate Hugging Face**
 ```python
 from huggingface_hub import login
 login(token="your_huggingface_token")  # Replace with your actual HF token
 ```
 
-### 🔹 **3. Start the AI Model**
+###  **3. Start the AI Model**
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
@@ -50,10 +50,10 @@ model_name = "mistralai/Mistral-7B-Instruct-v0.1"
 tokenizer = AutoTokenizer.from_pretrained(model_name, token="your_huggingface_token")
 model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16, device_map="auto")
 
-print("✅ AI Model Loaded Successfully!")
+print(" AI Model Loaded Successfully!")
 ```
 
-### 🔹 **4. Start Flask & ngrok**
+### **4. Start Flask & ngrok**
 ```python
 from flask import Flask, request
 from pyngrok import ngrok
@@ -61,7 +61,7 @@ from pyngrok import ngrok
 app = Flask(__name__)
 
 ngrok_url = ngrok.connect(5000).public_url
-print(f"🌍 ngrok is running at: {ngrok_url}")
+print(f" ngrok is running at: {ngrok_url}")
 
 @app.route("/voice", methods=["POST"])
 def voice():
@@ -70,7 +70,7 @@ def voice():
 app.run(debug=True, port=5000)
 ```
 
-### 🔹 **5. Make a Call Using Twilio**
+###  **5. Make a Call Using Twilio**
 ```python
 from twilio.rest import Client
 
@@ -86,19 +86,19 @@ call = client.calls.create(
     from_=TWILIO_PHONE,
     url=f"{ngrok_url}/voice"
 )
-print(f"📞 Call initiated: {call.sid}")
+print(f" Call initiated: {call.sid}")
 ```
 
 ---
 
-## 🎥 **Demo Video**
-📌 [Watch the full AI Caller demo here](#) (https://drive.google.com/file/d/1zbg2BmcR1s84UJh0EZ7IPve9MSuKEKj9/view?usp=sharing).  
+##  **Demo Video**
+ [Watch the full AI Caller demo here](#) (https://drive.google.com/file/d/1zbg2BmcR1s84UJh0EZ7IPve9MSuKEKj9/view?usp=sharing).  
 
 ---
 
-## 📜 **Project Structure**
+##  **Project Structure**
 ```
-📂 Sales-Caller-AI/
+Sales-Caller-AI/
 │── Sales Caller AI.ipynb               # Flask Server & AI Model
 │── README.md            # Project Documentation
 
@@ -106,9 +106,9 @@ print(f"📞 Call initiated: {call.sid}")
 
 ---
 
-## 📧 **Contact**
-💡 Created by **Kavya Kapoor**  
-📧 Email: **kavyakapoor869@gmail.com**  
-🚀 **Feel free to contribute or ask questions!**  
+##  **Contact**
+Created by **Kavya Kapoor**  
+ Email: **kavyakapoor869@gmail.com**  
+ **Feel free to contribute or ask questions!**  
 
 ---
