@@ -99,7 +99,7 @@ print(f"📞 Call initiated: {call.sid}")
 ## 📜 **Project Structure**
 ```
 📂 Sales-Caller-AI/
-│── Sales Caller AI.pynb               # Flask Server & AI Model
+│── Sales Caller AI.ipynb               # Flask Server & AI Model
 │── README.md            # Project Documentation
 
 ```
