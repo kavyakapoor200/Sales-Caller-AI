@@ -1,7 +1,7 @@
 
 ## ** Sales Caller AI - Twilio + AI Voice Assistant**
 ### ** AI-powered sales assistant for real-time customer calls!**
-This project uses **Flask, Twilio, and Mistral-7B AI** to make **real-time sales calls** to Indian numbers, provide course details, and book Google Meet demos.
+AI-powered voice assistant that uses a pre-trained Mistral-7B LLM to make real-time sales calls via Twilio, dynamically respond to user inputs, and book Google Meet demos. Demonstrates real-world ML application through LLM integration and voice automation.
 
 ---
 
